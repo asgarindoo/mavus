@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LogoMarquee from "@/components/ui/logoMarquee";
 import { BarChart3, Users, Calendar, FileText, TrendingUp, Package } from "lucide-react"
+import { PricingCard } from "@/components/ui/pricingCard";
 
 export default function Home() {
   return (
@@ -181,6 +182,57 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Pricing Section */}
+      <div className="container mx-auto px-6">
+      <div className="text-center space-y-4 mb-16">
+        <h2 className="text-3xl md:text-4xl text-foreground text-balance">
+          Pricing Plan
+        </h2>
+        <p className="text-sm md:text-lg font-light text-muted-foreground max-w-2xl mx-auto text-pretty">
+          Choose the plan that fits your business needs. Upgrade anytime as you grow
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <PricingCard
+          title="Free"
+          description="Perfect for small businesses getting started"
+          price="$0"
+          features={[
+            "Up to 5 team members",
+            "Basic project management",
+            "Document storage (1GB)",
+            "Email support",
+            "Standard integrations",
+            "Basic analytics",
+          ]}
+          buttonText="Get started free"
+          buttonLink="/register"
+        />
+
+        <PricingCard
+          title="Pro"
+          description="For growing businesses"
+          price="$49"
+          features={[
+            "Unlimited team members",
+            "Advanced project management",
+            "Unlimited document storage",
+            "Priority support",
+            "Premium integrations",
+            "Advanced analytics & reporting",
+            "Financial management tools",
+            "Process automation",
+            "Custom branding",
+          ]}
+          buttonText="Start Pro trial"
+          buttonLink="/register"
+          highlight
+          highlightLabel="Most Popular"
+        />
+      </div>
+    </div>
     </section>
 
     </div>

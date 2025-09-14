@@ -28,6 +28,9 @@ export function NavbarLP() {
           <Link href="#testimonials" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             Testimoni
           </Link>
+          <Link href="#testimonials" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            FAQ
+          </Link>
           <Link href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             Contact
           </Link>

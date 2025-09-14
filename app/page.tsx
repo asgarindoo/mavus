@@ -2,6 +2,7 @@ import NavbarLP from "@/components/ui/NavbarLP";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import LogoMarquee from "@/components/ui/logoMarquee";
 
 export default function Home() {
   return (
@@ -9,8 +10,8 @@ export default function Home() {
       {/* Header */}
       <NavbarLP />
 
-      {/* Hero Section */}
       <section className="w-full py-24 md:py-32 lg:py-40 ">
+      {/* Hero Section */}
       <div className="container mx-auto px-6 -mt-20 md:-mt-26">
         <div className="flex flex-col items-center text-center space-y-6 max-w-4xl mx-auto">
           <div className="inline-flex items-center rounded-full border border-border bg-card px-4 py-2">
@@ -53,8 +54,19 @@ export default function Home() {
           alt="Dashboard Preview"
           width={1200}
           height={600}
-          className="rounded-xl shadow-lg border"
+          className="rounded-md shadow-lg border"
           />
+      </div>
+
+      {/*Marquee Logo Business*/}
+      <div className="mt-20 text-center text-sm border-t border-gray-200 mx-40">
+        <p className="py-4 pt-20 text-2xl font-medium">
+          Trusted by over 100 businesses in Indonesia 
+        </p>
+        <LogoMarquee />
+        <p>
+          And many more...
+        </p>
       </div>
     </section>
 

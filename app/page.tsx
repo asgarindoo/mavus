@@ -5,14 +5,17 @@ import Image from "next/image";
 import LogoMarquee from "@/components/ui/logoMarquee";
 import { BarChart3, Users, Calendar, FileText, TrendingUp, Package } from "lucide-react"
 import { PricingCard } from "@/components/ui/pricingCard";
+import TestimonialSection from "@/components/ui/testimonialSection";
+import FAQSection from "@/components/ui/faqSection";
+import ContactSection from "@/components/ui/contactSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Header */}
       <NavbarLP />
 
-      <section className="w-full py-24 md:py-32 lg:py-40 ">
+      <section className="w-full pt-24 md:pt-32 lg:pt-40">
       {/* Hero Section */}
       <div className="container mx-auto px-6 -mt-20 md:-mt-26">
         <div className="flex flex-col items-center text-center space-y-6 max-w-4xl mx-auto">
@@ -53,7 +56,7 @@ export default function Home() {
       <div className="w-full max-w-6xl mt-12 mx-auto px-4">
       <div className="relative w-full aspect-[2/1] md:aspect-[16/9] lg:aspect-[21/9]">
         <Image
-          src="/placehoder_dashboard.png"
+          src="/db_placeholder.png"
           alt="Dashboard Preview"
           fill
           className="object-cover rounded-md shadow-lg border"
@@ -233,8 +236,51 @@ export default function Home() {
         />
       </div>
     </div>
-    </section>
+    {/* Testimonial Section */}
+      <TestimonialSection />
 
+    {/* FAQ Section */}
+      <FAQSection />
+
+    {/* Contact Section */}
+      <ContactSection />
+
+
+
+
+    </section>
+    <div className="bg-black text-white py-12 px-6 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-4 left-4 w-2 h-2 bg-white rounded-full"></div>
+        <div className="absolute top-8 right-12 w-1 h-1 bg-white rounded-full"></div>
+        <div className="absolute bottom-6 left-1/3 w-1.5 h-1.5 bg-white rounded-full"></div>
+        <div className="absolute bottom-4 right-1/4 w-1 h-1 bg-white rounded-full"></div>
+      </div>
+
+      <div className="max-w-6xl mx-auto relative">
+        <div className="flex flex-col items-center space-y-6">
+          <div className="relative group">
+            <Image
+              src="/mavus_logo_lanescape.png"
+              alt="Mavus Logo"
+              width={100}
+              height={50}
+              className="invert brightness-200"
+            />
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-px bg-gradient-to-r from-transparent via-white to-transparent"></div>
+            <div className="w-1 h-1 bg-white rounded-full"></div>
+            <div className="w-8 h-px bg-gradient-to-r from-transparent via-white to-transparent"></div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-gray-400 text-sm font-light tracking-wider">© 2024 — Crafted with precision</p>
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
   );
 }

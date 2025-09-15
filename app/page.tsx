@@ -5,6 +5,7 @@ import Image from "next/image";
 import LogoMarquee from "@/components/ui/logoMarquee";
 import { BarChart3, Users, Calendar, FileText, TrendingUp, Package } from "lucide-react"
 import { PricingCard } from "@/components/ui/pricingCard";
+import TestimonialSection from "@/components/ui/testimonialSection";
 
 export default function Home() {
   return (
@@ -233,6 +234,8 @@ export default function Home() {
         />
       </div>
     </div>
+    {/* Testimonial Section */}
+      <TestimonialSection />
     </section>
 
     </div>

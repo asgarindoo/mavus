@@ -10,7 +10,7 @@ export function NavbarLP() {
         <div className="flex-shrink-0">
           <Image
             src="/mavus_logo_lanescape.png"
-            alt="Mavus Logo"
+            alt="MavusLogo"
             width={120}
             height={40}
             className="h-8 w-auto object-contain"

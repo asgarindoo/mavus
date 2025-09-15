@@ -93,7 +93,7 @@ export default function TestimonialSection() {
       {/* Header with navigation */}
       <div className="flex items-start justify-between mb-16">
         <div className="max-w-2xl">
-          <h2 className="text-4xl md:text-5xl font-light text-black leading-tight text-balance">
+          <h2 className="text-2xl md:text-4xl text-black leading-tight text-balance">
             What Our Clients Say
           </h2>
         </div>

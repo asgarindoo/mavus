@@ -11,8 +11,8 @@ export default function ContactSection() {
           <p className="text-gray-600 font-medium mb-4">Still have questions?</p>
         </div>
 
-        <div className="max-w-4xl mx-auto mt-16">
-          <div className="bg-black rounded-2xl p-12 lg:p-16 text-center relative overflow-hidden">
+        <div className="max-w-3xl mx-auto mt-16">
+          <div className="bg-black rounded-xl p-12 lg:p-16 text-center relative overflow-hidden">
             <div className="relative z-10">
               {/* Header */}
               <div className="mb-12">

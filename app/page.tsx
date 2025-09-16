@@ -239,18 +239,13 @@ export default function Home() {
     </div>
     {/* Testimonial Section */}
       <TestimonialSection />
-
     {/* FAQ Section */}
       <FAQSection />
-
     {/* Contact Section */}
       <ContactSection />
-
     </section>
-
     {/* Footer */}
     <FooterLP />
-
     </div>
   );
 }

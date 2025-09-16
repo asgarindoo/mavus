@@ -28,7 +28,7 @@ export default function FooterLP() {
           </div>
 
           <div className="text-center">
-            <p className="text-gray-400 text-sm font-light tracking-wider">© 2024 — Crafted with precision</p>
+            <p className="text-gray-400 text-sm font-light tracking-wider">© 2025 — All rights reserved</p>
           </div>
         </div>
       </div>

@@ -212,7 +212,7 @@ export default function Home() {
             "Basic analytics",
           ]}
           buttonText="Get started free"
-          buttonLink="/register"
+          buttonLink="/sign-up"
         />
 
         <PricingCard
@@ -231,7 +231,7 @@ export default function Home() {
             "Custom branding",
           ]}
           buttonText="Start Pro trial"
-          buttonLink="/register"
+          buttonLink="/sign-up"
           highlight
           highlightLabel="Most Popular"
         />

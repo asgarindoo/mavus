@@ -39,10 +39,10 @@ export function NavbarLP() {
         {/* Right: Buttons */}
         <div className="flex items-center space-x-4 flex-shrink-0">
           <Button variant="ghost" asChild className=" bg-transparent rounded-sm font-light hover:bg-gray-200 hover:text-foreground"> 
-            <Link href="/signin">Sign in</Link> 
+            <Link href="/sign-in">Sign in</Link> 
           </Button> 
           <Button asChild className="rounded-sm font-light"> 
-            <Link href="/signup">Start for free</Link> 
+            <Link href="/sign-up">Start for free</Link> 
           </Button>
         </div>
       </div>

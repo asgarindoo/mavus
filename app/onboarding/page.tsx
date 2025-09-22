@@ -1,20 +1,28 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Building2, Globe, ImageIcon, Upload } from "lucide-react"
 import Image from "next/image"
+import { createTenantAction } from "../action"
+import { useActionState } from 'react'
+
+  
 
 export default function OnboardingForm() {
+
   const [businessName, setBusinessName] = useState("")
   const [subdomain, setSubdomain] = useState("")
   const [logoPreview, setLogoPreview] = useState<string | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
-  const router = useRouter()
+
+  const [state, formAction, isPending] = useActionState(
+    createTenantAction,
+    { success: false, error: "" }
+  )
+
 
   // Auto-generate subdomain dari business name
   useEffect(() => {
@@ -36,18 +44,6 @@ export default function OnboardingForm() {
     }
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!businessName || !subdomain) {
-      alert("Please fill in all required fields")
-      return
-    }
-    setIsLoading(true)
-    setTimeout(() => {
-      setIsLoading(false)
-      router.push(`${subdomain}/dashboard`)
-    }, 1200)
-  }
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
@@ -61,7 +57,7 @@ export default function OnboardingForm() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-8">
+          <form action={formAction} className="grid md:grid-cols-2 gap-8">
             {/* Form kiri */}
             <div className="space-y-5">
               {/* Business Name */}
@@ -117,9 +113,9 @@ export default function OnboardingForm() {
               <Button
                 type="submit"
                 className="w-full bg-black text-white hover:bg-gray-800"
-                disabled={isLoading}
+                disabled={isPending}
               >
-                {isLoading ? "Setting up..." : "Complete Setup"}
+                {isPending ? "Setting up..." : "Complete Setup"}
               </Button>
             </div>
 
@@ -170,6 +166,10 @@ export default function OnboardingForm() {
                 <p className="text-xs text-gray-600">
                   {subdomain || "your-subdomain"}.mavus.app
                 </p>
+
+                {state.error && (
+                  <p className="text-sm text-red-500">{state.error}</p>
+                )}
               </div>
             </div>
           </form>

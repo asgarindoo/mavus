@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mavus - Enterprise Resource Planning for MSMEs",
-  description: "All-in-One Business Management System for Micro, Small, and Medium Enterprises"
+  title: "Mavus - Business Management System",
+  description: "All-in-One Business Management System for SMEs",
+  icons: {
+    icon: "/mavus_logo.png",
+  },
 }
 
 export default function RootLayout({
